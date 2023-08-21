@@ -57,13 +57,6 @@ const curriedSum = numArgs => {
   return  _curriedSum;
 };
 
-const sum = curriedSum(4); // returns a function
-console.log(sum(5)) // returns a function
-console.log(sum(20)) // returns a function
-console.log(sum(30)) // returns a function
-console.log(sum(20)); // => returns 75
-console.log(sum(48))
-console.log(sum(4))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = curriedSum;

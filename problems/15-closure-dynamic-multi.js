@@ -24,8 +24,6 @@ const dynamicMultiply = num => {
   }
 };
 
-const multiplyByFive = dynamicMultiply(5);
-multiplyByFive(5); // returns 25
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = dynamicMultiply;

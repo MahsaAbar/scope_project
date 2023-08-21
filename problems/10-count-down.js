@@ -42,17 +42,6 @@ const countDownTimer = num => {
     }
 };
 
-console.log(countDownTimer(0)); // prints "Happy New Year!"
-
-let twoDays = countDownTimer(2); // returns a function
-console.log(twoDays()); // returns a function
-console.log(twoDays()); // prints "Happy New Year!"
-
-let threeDays = countDownTimer(3); // returns a function
-  console.log(threeDays()); // returns a function
-  console.log(threeDays()); // returns a function
-  console.log(threeDays()); // prints "Happy New Year!"
-
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = countDownTimer;
