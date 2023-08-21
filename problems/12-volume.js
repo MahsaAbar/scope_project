@@ -23,9 +23,21 @@ console.log(table2(1)); // prints 6
 console.log(table2(75)); // STILL prints 6
 
 ***********************************************************************/
-function recVolume(height) {
-  // Your code here
-}
+const recVolume = height => {
+  let count = 1;
+  let volume = height;
+  return function(num){
+    count ++;
+    if(count === 3){
+      volume *= num;
+      return volume;
+    }else if (count > 3){
+      return volume;
+    }else{
+      volume *= num
+    }
+  }
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {

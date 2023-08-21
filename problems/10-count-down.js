@@ -27,9 +27,31 @@ Example 4:
   console.log(threeDays()); // prints "Happy New Year!"
 
 ***********************************************************************/
-function countDownTimer(num) {
-  // Your code here
-}
+const countDownTimer = num => {
+  if(num === 0){
+    return "Happy New Year!";
+  }else{
+      num--;
+      return function(){
+        if(num === 0){
+          return "Happy New Year!";
+        }else{
+            num--;
+          }
+      }
+    }
+};
+
+console.log(countDownTimer(0)); // prints "Happy New Year!"
+
+let twoDays = countDownTimer(2); // returns a function
+console.log(twoDays()); // returns a function
+console.log(twoDays()); // prints "Happy New Year!"
+
+let threeDays = countDownTimer(3); // returns a function
+  console.log(threeDays()); // returns a function
+  console.log(threeDays()); // returns a function
+  console.log(threeDays()); // prints "Happy New Year!"
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {

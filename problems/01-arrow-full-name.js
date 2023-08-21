@@ -14,7 +14,11 @@ arrowGetFullName(p2); // => 'Charlie Brown'
 
 ***********************************************************************/
 
-// Your code here
+const arrowGetFullName = obj =>{
+  let fname = obj.firstName;
+  let lname = obj.lastName;
+  return (`${fname} ${lname}`);
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {

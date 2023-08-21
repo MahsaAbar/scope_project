@@ -18,10 +18,14 @@ multiplyByFive(5); // returns 25
 
 ***********************************************************************/
 
-function dynamicMultiply(num) {
-  // Your code here
-}
+const dynamicMultiply = num => {
+  return function(arg){
+    return arg * num;
+  }
+};
 
+const multiplyByFive = dynamicMultiply(5);
+multiplyByFive(5); // returns 25
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = dynamicMultiply;

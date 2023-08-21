@@ -24,9 +24,20 @@ console.log(smoothie2("pineapple"));
 ***********************************************************************/
 
 const smoothieMachine = (...ingredients) => {
-  // Your code here
+  
+  let str ="I'm having a smoothie with ";
+  let msg =[];
+  return function(...ing){
+    msg.push(...ing)
+    let inglist = msg.join(" and ");
+    return str + inglist;
+  }
 };
+let smoothie1 = smoothieMachine();
 
+console.log(smoothie1("milk"));
+console.log(smoothie1("kale", "spinach"));
+console.log(smoothie1("banana"));
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = smoothieMachine;

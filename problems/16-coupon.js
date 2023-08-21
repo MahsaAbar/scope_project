@@ -14,9 +14,18 @@ console.log(twentyPercent([10, 20, 30])); // [ 8, 16, 24 ]
 
 
 ***********************************************************************/
-function coupon(discount) {
-  // Your code here
-}
+const coupon = discount =>{
+
+  return function (array){
+    let newArr = [];
+    array.forEach((el) =>{
+      let newnum = el - (el*discount);
+      newArr.push(newnum);
+      
+    })
+    return newArr;
+  }
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {

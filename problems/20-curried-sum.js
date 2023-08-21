@@ -42,9 +42,28 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
   be useful
 ***********************************************************************/
 
-function curriedSum(numArgs) {
-  // Your code here
-}
+const curriedSum = numArgs => {
+  numArr = [];
+
+  function _curriedSum (num){
+      numArr.push(num);
+      if(numArr.length === numArgs){
+          let sum = numArr.reduce((accum, num) => accum + num, 0);
+          return sum;
+      }else{
+        return _curriedSum;
+      }
+  }
+  return  _curriedSum;
+};
+
+const sum = curriedSum(4); // returns a function
+console.log(sum(5)) // returns a function
+console.log(sum(20)) // returns a function
+console.log(sum(30)) // returns a function
+console.log(sum(20)); // => returns 75
+console.log(sum(48))
+console.log(sum(4))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = curriedSum;
